@@ -14,3 +14,6 @@ COPY index.html .
 
 # Run BusyBox httpd
 CMD ["busybox", "httpd", "-f", "-v", "-p", "3000"]
+
+# Fix slow container shutdown
+STOPSIGNAL SIGKILL
